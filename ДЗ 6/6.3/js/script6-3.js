@@ -26,4 +26,3 @@ const contactBook = {
   }
 };
 
-const userName = prompt("Enter name:");
