@@ -1,21 +1,45 @@
-let currentIndex = 0;
 const track = document.getElementById('track');
 const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.getElementById('dotsContainer');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-function updateButtons() {
-  prevBtn.disabled = (currentIndex === 0);
+let currentIndex = 0;
+
+slides.forEach((slide, index) => {
+  const dot = document.createElement('div');
+
+  dot.classList.add('dot');
+  if (index === 0) {
+    dot.classList.add('active');
+  }
+
+  dot.addEventListener('click', () => {
+    goToSlide(index);
+  });
   
-  nextBtn.disabled = (currentIndex === slides.length - 1);
+  dotsContainer.append(dot);
+});
+
+const dots = document.querySelectorAll('.dot');
+
+function slider() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex === slides.length - 1;
+  
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
+  });
 }
 
 function moveSlide(direction) {
-  const nextIndex = currentIndex + direction;
+  currentIndex += direction;
+  slider();
+}
 
-  if (nextIndex >= 0 && nextIndex < slides.length) {
-    currentIndex = nextIndex;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    updateButtons();
-  }
+function goToSlide(index) {
+  currentIndex = index;
+  slider();
 }

@@ -319,7 +319,7 @@ ul {
   position: relative;
 }
 
-.slider-container {
+.slider-wrapper {
   width: 100%;  
   overflow: hidden;
 }
@@ -336,15 +336,15 @@ ul {
   width: 100%;
 }
 
-.slider .btn-prev {
+.slider #prevBtn {
   left: 0;
 }
 
-.slider .btn-prev img {
+.slider #prevBtn img {
   transform: rotate(180deg);
 }
 
-.slider .btn-next {
+.slider #nextBtn {
   right: 0;
 }
 
@@ -364,4 +364,23 @@ ul {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+}
+
+.dots-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dot.active {
+  background: #333;
+  transform: scale(1.2);
 }

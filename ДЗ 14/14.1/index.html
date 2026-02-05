@@ -12,28 +12,23 @@
 
 <body>
 <div class="slider">
-  <div class="slider-container">
+  <div class="slider-wrapper">
     <div class="slider-track" id="track">
-      <div class="slide">
-        <img src="img/1.png" alt="Image" />
-      </div>
-
-      <div class="slide">
-        <img src="img/2.png" alt="Image" />
-      </div>
-
-      <div class="slide">
-         <img src="img/3.png" alt="Image" />
-      </div>
+      <div class="slide"><img src="img/1.png" /></div>
+      <div class="slide"><img src="img/2.png" /></div>
+      <div class="slide"><img src="img/3.png" /></div>
     </div>
   </div>
 
-  <button id="prevBtn" class="btn btn-prev" onclick="moveSlide(-1)" disabled>
-    <img src="img/next.png" />
-  </button>
-  <button id="nextBtn" class="btn btn-next" onclick="moveSlide(1)">
-    <img src="img/next.png" />
-  </button>
+  <div class="controls">
+    <button id="prevBtn" class="btn" onclick="moveSlide(-1)" disabled>
+      <img src="img/next.png" />
+    </button>
+    <div id="dotsContainer" class="dots-container"></div>
+    <button id="nextBtn" class="btn" onclick="moveSlide(1)">
+      <img src="img/next.png" />
+    </button>
+  </div>
 </div>
 
 
