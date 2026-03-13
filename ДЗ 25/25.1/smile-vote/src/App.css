@@ -1,0 +1,73 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.emoji-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.emoji-item {
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji-item:hover {
+  transform: scale(1.2);
+}
+
+.emoji-char {
+  font-size: 3.5rem;
+}
+
+.emoji-count {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-results {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.results-title, .winner-header {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.winner-icon {
+  font-size: 5rem;
+  margin: 15px 0;
+}
+
+.winner-votes-text {
+  font-size: 1.2rem;
+}
+
+.btn-clear {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
